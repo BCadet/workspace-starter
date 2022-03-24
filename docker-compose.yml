@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+   workspace-starter-bash:
+    image:  ghcr.io/BCadet/workspace-starter
+    build:
+      context: .
+    stdin_open: true
+    tty: true
+    environment:
+      - USER_ID=${USER_ID}
+      - GROUP_ID=${GROUP_ID}
